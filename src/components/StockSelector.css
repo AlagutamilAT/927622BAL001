@@ -1,0 +1,45 @@
+.form-control-group {
+  position: relative;
+  margin-bottom: 16px; /* Spacing between form groups */
+  width: 100%; /* Ensure it takes full width of its parent grid item */
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.875rem; /* Standard label font size */
+  color: rgba(0, 0, 0, 0.6); /* Standard label color */
+  transform-origin: top left;
+  transition: transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
+  pointer-events: none; /* Allows clicks to pass through to the select */
+}
+
+.form-select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid rgba(0, 0, 0, 0.23); /* Standard input border */
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 1rem; /* Standard input font size */
+  color: rgba(0, 0, 0, 0.87); /* Standard input text color */
+  appearance: none; /* Remove default browser select arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13.2-6.4H18.4c-6.5%200-12.3%203.8-13.2%206.4l133%20140.7a17.6%2017.6%200%200%200%2013.2%206.4%2017.6%2017.6%200%200%200%2013.2-6.4z%22%2F%3E%3C%2Fsvg%3E'); /* Custom arrow */
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.form-select:focus {
+  border-color: #1976d2; /* Primary color on focus */
+  box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.2); /* Light shadow on focus */
+}
+
+.form-select:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}

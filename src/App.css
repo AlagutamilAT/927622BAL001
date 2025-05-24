@@ -1,0 +1,157 @@
+/* Basic styling for the header/navigation bar */
+.app-header {
+  background-color: #2196F3; /* Material UI primary blue */
+  color: white;
+  padding: 0 24px; /* Matches AppBar padding */
+  box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 
+              0px 4px 5px 0px rgba(0,0,0,0.14), 
+              0px 1px 10px 0px rgba(0,0,0,0.12); /* Mimics Material UI shadow */
+  min-height: 64px; /* Standard AppBar height on desktop */
+  display: flex;
+  align-items: center;
+}
+
+.app-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1280px; /* Max width for content, similar to Material UI Container */
+  margin: 0 auto; /* Center the content */
+  min-height: inherit; /* Inherit min-height from header */
+}
+
+.app-title {
+  margin: 0;
+  font-size: 1.5rem; /* Equivalent to h6 variant in Material UI */
+  font-weight: bold;
+  flex-grow: 1;
+}
+
+.app-nav-links {
+  display: flex;
+  /* Hide on small screens, show on medium and up - equivalent to MUI sx={{ display: { xs: 'none', md: 'block' } }} */
+  /* This requires media queries for full responsiveness. */
+}
+
+.nav-button {
+  color: inherit; /* Inherit white color from header */
+  text-decoration: none;
+  padding: 8px 12px; /* Standard button padding */
+  margin: 0 8px; /* Margin between buttons */
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 0.875rem; /* Standard button font size */
+  font-weight: 500; /* Standard button font weight */
+  text-transform: uppercase; /* Standard button text transform */
+  transition: background-color 0.3s ease; /* Smooth transition for hover */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.nav-button:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
+}
+
+/* Styling for the main content container */
+.main-content-container {
+  max-width: 1280px; /* Matches Material UI lg breakpoint */
+  margin: 32px auto; /* mt: 4, mb: 4 (32px) and auto for horizontal centering */
+  padding: 0 16px; /* Add some horizontal padding for smaller screens */
+}
+
+/* Basic responsiveness for the navigation links */
+@media (max-width: 900px) { /* md breakpoint for Material UI */
+  .app-nav-links {
+    display: none; /* Hide nav links on smaller screens */
+  }
+  /* You would typically add a "hamburger menu" icon here to toggle mobile navigation */
+}
+
+@media (min-width: 901px) {
+  .app-nav-links {
+    display: flex; /* Show nav links on larger screens */
+  }
+}
+
+/* General Card Styling (can be refined per component if needed) */
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* General Button Styling (used if you have raw buttons outside component-specific ones) */
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+/* Alert Styling (for consistency across pages) */
+.alert {
+  padding: 15px;
+  border-radius: 5px;
+  margin: 20px 0;
+  font-weight: 500;
+  text-align: center;
+}
+
+.alert-error {
+  background-color: #ffebee;
+  color: #d32f2f;
+  border: 1px solid #ef9a9a;
+}
+
+.alert-info {
+  background-color: #e3f2fd;
+  color: #2196f3;
+  border: 1px solid #90caf9;
+}
+
+.alert-warning {
+  background-color: #fff3e0;
+  color: #ff9800;
+  border: 1px solid #ffcc80;
+}
+
+/* Loading Spinner (for consistency) */
+.loading-spinner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.loading-spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #1976d2;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Grid for controls (re-used for consistency) */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  align-items: flex-end; /* Align items to the bottom if they have different heights */
+}
+
+.grid-item {
+  /* No specific styling needed here unless you want borders or padding */
+}

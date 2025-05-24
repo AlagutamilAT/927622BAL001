@@ -1,0 +1,122 @@
+.heatmap-container {
+  margin-top: 16px; /* Equivalent to MUI sx={{ mt: 2 }} */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heatmap-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.16); /* Mimics MUI elevation=3 */
+  padding: 24px; /* Equivalent to MUI sx={{ p: 3 }} */
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.heatmap-title {
+  font-size: 1.5rem; /* Equivalent to MUI Typography variant="h6" */
+  font-weight: 500;
+  margin-bottom: 16px; /* Equivalent to gutterBottom */
+  color: #333;
+}
+
+.correlation-box {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px; /* Equivalent to borderRadius: 2 */
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.2), 
+              0px 2px 2px rgba(0,0,0,0.14), 
+              0px 3px 1px -2px rgba(0,0,0,0.12); /* Mimics MUI boxShadow: 3 */
+  margin: 16px auto; /* Equivalent to mx: 'auto', my: 2 */
+  position: relative;
+}
+
+.correlation-value {
+  font-size: 2.5rem; /* Equivalent to MUI Typography variant="h4" */
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.stock-details-row {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 24px; /* Equivalent to MUI mt: 3 */
+}
+
+.stock-details-item {
+    text-align: center;
+}
+
+.stock-ticker {
+    font-size: 1rem; /* Equivalent to subtitle1 */
+    font-weight: bold;
+    margin-bottom: 4px;
+    color: #333;
+}
+
+.stock-avg-price {
+    font-size: 0.875rem; /* Equivalent to body2 */
+    color: #555;
+}
+
+
+.legend-container {
+  margin-top: 32px; /* Equivalent to MUI mt: 4 */
+}
+
+.legend-title {
+  font-size: 0.875rem; /* Equivalent to MUI Typography variant="subtitle2" */
+  font-weight: 500;
+  margin-bottom: 8px; /* Equivalent to gutterBottom */
+  color: #333;
+}
+
+.legend-grid {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  justify-content: center;
+  align-items: center;
+  gap: 8px; /* Equivalent to MUI spacing={1} */
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 4px; /* Space between color box and text */
+}
+
+.legend-color-box {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.legend-text {
+  font-size: 0.75rem; /* Equivalent to MUI Typography variant="caption" */
+  color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .correlation-box {
+    width: 120px;
+    height: 120px;
+  }
+  .correlation-value {
+    font-size: 2rem;
+  }
+  .heatmap-title {
+    font-size: 1.25rem;
+  }
+  .legend-grid {
+    flex-direction: column; /* Stack legend items vertically on very small screens */
+    align-items: flex-start;
+  }
+}

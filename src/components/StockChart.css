@@ -1,0 +1,30 @@
+/* Styling for the custom tooltip */
+.custom-tooltip-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 8px; /* Equivalent to MUI sx={{ p: 1 }} */
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.1); /* Simple shadow */
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+.tooltip-text {
+  margin: 0; /* Remove default paragraph margin */
+  font-size: 0.875rem; /* Equivalent to MUI Typography variant="body2" */
+  color: rgba(0, 0, 0, 0.6); /* Equivalent to text.secondary */
+  line-height: 1.4;
+}
+
+.tooltip-price {
+  margin: 0;
+  font-size: 1rem; /* Equivalent to MUI Typography variant="body1" */
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Styling for "No data available" message */
+.no-data-message {
+  font-size: 1rem; /* Equivalent to MUI Typography variant="body1" */
+  color: rgba(0, 0, 0, 0.6); /* Equivalent to text.secondary */
+  text-align: center;
+  margin-top: 20px;
+}
